@@ -50,6 +50,27 @@ java -cp ".;antlr-4.13.2-complete.jar" ScopeChecker test1.pas
 
 ```
 
+
+### For MAC
+
+Generate ANTLR Lexer and Parser
+
+java -jar < -path to the antlr jar file > Delphi.g4 -Dlanguage=Java -visitor
+
+java -jar /usr/local/lib/antlr-4.13.2-complete.jar pascal.g4 -Dlanguage=Java -visitor
+
+Compile the files
+
+javac -cp ".:/usr/local/lib/antlr-4.13.2-complete.jar" *.java
+
+Run the interpreter with the testcase file
+
+java -cp ".:/usr/local/lib/antlr-4.13.2-complete.jar" ScopeChecker < -test case file name>
+
+java -cp ".:/usr/local/lib/antlr-4.13.2-complete.jar" ScopeChecker test2.pas
+
+
+
 This will generate `output.ll` in the current directory.
 
 ----------
